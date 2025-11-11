@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,30 +10,30 @@
             size: A4;
             margin: 0;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Georgia', serif;
             background: #f5f5f5;
             padding: 20px;
         }
-        
+
         .page {
             width: 210mm;
             min-height: 297mm;
             background: white;
             margin: 20px auto;
             padding: 25mm;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
             page-break-after: always;
             position: relative;
         }
-        
+
         /* Navigation */
         .nav-bar {
             position: fixed;
@@ -41,18 +42,18 @@
             background: white;
             padding: 15px;
             border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
             z-index: 1000;
             max-height: 80vh;
             overflow-y: auto;
         }
-        
+
         .nav-bar h3 {
             color: #667eea;
             margin-bottom: 15px;
             font-size: 16px;
         }
-        
+
         .nav-bar a {
             display: block;
             padding: 8px 12px;
@@ -63,12 +64,12 @@
             font-size: 13px;
             transition: all 0.3s;
         }
-        
+
         .nav-bar a:hover {
             background: #667eea;
             color: white;
         }
-        
+
         /* Print Button */
         .print-btn {
             position: fixed;
@@ -86,12 +87,12 @@
             z-index: 1000;
             transition: transform 0.3s;
         }
-        
+
         .print-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
         }
-        
+
         /* Decorative Corners */
         .corner-design {
             position: absolute;
@@ -99,12 +100,35 @@
             height: 40px;
             border: 3px solid #667eea;
         }
-        
-        .corner-tl { top: 15mm; left: 15mm; border-right: none; border-bottom: none; }
-        .corner-tr { top: 15mm; right: 15mm; border-left: none; border-bottom: none; }
-        .corner-bl { bottom: 15mm; left: 15mm; border-right: none; border-top: none; }
-        .corner-br { bottom: 15mm; right: 15mm; border-left: none; border-top: none; }
-        
+
+        .corner-tl {
+            top: 15mm;
+            left: 15mm;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .corner-tr {
+            top: 15mm;
+            right: 15mm;
+            border-left: none;
+            border-bottom: none;
+        }
+
+        .corner-bl {
+            bottom: 15mm;
+            left: 15mm;
+            border-right: none;
+            border-top: none;
+        }
+
+        .corner-br {
+            bottom: 15mm;
+            right: 15mm;
+            border-left: none;
+            border-top: none;
+        }
+
         /* Front Page */
         .front-page {
             text-align: center;
@@ -113,7 +137,7 @@
             justify-content: center;
             min-height: 247mm;
         }
-        
+
         .logo {
             width: 80px;
             height: 80px;
@@ -128,27 +152,27 @@
             font-weight: bold;
             box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
         }
-        
+
         .institution {
             color: #2d3748;
             font-size: 24px;
             font-weight: bold;
             margin: 20px 0 5px 0;
         }
-        
+
         .college-info {
             color: #4a5568;
             font-size: 16px;
             margin: 5px 0;
         }
-        
+
         .department {
             color: #667eea;
             font-size: 18px;
             margin: 15px 0;
             font-weight: 600;
         }
-        
+
         .divider {
             width: 150px;
             height: 3px;
@@ -156,7 +180,7 @@
             margin: 25px auto;
             border-radius: 2px;
         }
-        
+
         .project-title {
             font-size: 32px;
             color: #1a202c;
@@ -165,20 +189,20 @@
             text-transform: uppercase;
             letter-spacing: 2px;
         }
-        
+
         .project-subtitle {
             font-size: 20px;
             color: #764ba2;
             margin: 15px 0;
             font-weight: 600;
         }
-        
+
         .session {
             font-size: 16px;
             color: #718096;
             margin: 25px 0 40px 0;
         }
-        
+
         .student-info {
             margin-top: 50px;
             padding: 25px;
@@ -186,34 +210,34 @@
             border-radius: 10px;
             display: inline-block;
         }
-        
+
         .info-row {
             text-align: left;
             margin: 12px 0;
             font-size: 16px;
             color: #2d3748;
         }
-        
+
         .info-label {
             font-weight: bold;
             color: #667eea;
             display: inline-block;
             width: 150px;
         }
-        
+
         /* Certificate */
         .certificate-border {
             border: 4px double #667eea;
             padding: 30px;
             min-height: 247mm;
         }
-        
+
         .certificate-inner {
             border: 2px solid #764ba2;
             padding: 30px;
             height: 100%;
         }
-        
+
         .cert-title {
             font-size: 42px;
             color: #667eea;
@@ -224,37 +248,37 @@
             display: inline-block;
             padding-bottom: 10px;
         }
-        
+
         .cert-content {
             text-align: center;
             line-height: 2;
             margin: 40px 0;
             font-size: 16px;
         }
-        
+
         .student-name {
             font-size: 24px;
             font-weight: bold;
             color: #764ba2;
             text-decoration: underline;
         }
-        
+
         .cert-footer {
             display: flex;
             justify-content: space-between;
             margin-top: 80px;
         }
-        
+
         .signature-block {
             text-align: center;
         }
-        
+
         .signature-line {
             width: 150px;
             border-top: 2px solid #2d3748;
             margin: 50px auto 10px;
         }
-        
+
         /* Index */
         .index-title {
             font-size: 36px;
@@ -266,13 +290,13 @@
             border-bottom: 3px solid #764ba2;
             padding-bottom: 15px;
         }
-        
+
         .index-table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
         }
-        
+
         .index-table th {
             background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
@@ -280,16 +304,16 @@
             text-align: left;
             font-size: 16px;
         }
-        
+
         .index-table td {
             padding: 12px 15px;
             border-bottom: 1px solid #e2e8f0;
         }
-        
+
         .index-table tr:hover {
             background: #f7fafc;
         }
-        
+
         /* Content Pages */
         .page-title {
             font-size: 28px;
@@ -298,7 +322,7 @@
             padding-bottom: 10px;
             border-bottom: 3px solid #764ba2;
         }
-        
+
         .question {
             background: #f7fafc;
             padding: 15px;
@@ -307,7 +331,7 @@
             font-weight: 600;
             color: #2d3748;
         }
-        
+
         .code-block {
             background: #1a202c;
             color: #e2e8f0;
@@ -318,17 +342,28 @@
             font-family: 'Courier New', monospace;
             font-size: 14px;
             line-height: 1.6;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
             white-space: pre-wrap;
             tab-size: 4;
             word-wrap: break-word;
         }
-        
-        .code-block .comment { color: #68d391; }
-        .code-block .keyword { color: #f687b3; }
-        .code-block .function { color: #63b3ed; }
-        .code-block .string { color: #fbd38d; }
-        
+
+        .code-block .comment {
+            color: #68d391;
+        }
+
+        .code-block .keyword {
+            color: #f687b3;
+        }
+
+        .code-block .function {
+            color: #63b3ed;
+        }
+
+        .code-block .string {
+            color: #fbd38d;
+        }
+
         .output-block {
             background: #edf2f7;
             padding: 15px;
@@ -338,21 +373,21 @@
             font-size: 14px;
             white-space: pre-wrap;
         }
-        
+
         .section-heading {
             font-size: 22px;
             color: #764ba2;
             margin: 25px 0 15px 0;
             font-weight: 600;
         }
-        
+
         .explanation {
             line-height: 1.8;
             color: #4a5568;
             margin: 15px 0;
             text-align: justify;
         }
-        
+
         .sql-query {
             background: #2d3748;
             color: #68d391;
@@ -363,7 +398,7 @@
             font-size: 14px;
             white-space: pre-wrap;
         }
-        
+
         /* Bibliography */
         .bib-item {
             padding: 12px;
@@ -371,44 +406,48 @@
             border-left: 3px solid #667eea;
             background: #f7fafc;
         }
-        
+
         /* Acknowledgement */
         .ack-content {
             line-height: 1.8;
             text-align: justify;
             color: #2d3748;
         }
-        
+
         .ack-content p {
             margin: 20px 0;
             text-indent: 50px;
         }
-        
+
         .highlight {
             color: #764ba2;
             font-weight: 600;
         }
-        
+
         .ack-signature {
             margin-top: 60px;
             text-align: right;
         }
-        
+
         @media print {
             body {
                 background: white;
                 padding: 0;
             }
+
             .page {
                 margin: 0;
                 box-shadow: none;
             }
-            .nav-bar, .print-btn {
+
+            .nav-bar,
+            .print-btn {
                 display: none;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation Bar -->
     <div class="nav-bar">
@@ -435,7 +474,7 @@
         <a href="#sql">SQL Commands</a>
         <a href="#bibliography">Bibliography</a>
     </div>
-    
+
     <!-- Print Button -->
     <button class="print-btn" onclick="window.print()">🖨 Print Project</button>
 
@@ -445,36 +484,36 @@
         <div class="corner-design corner-tr"></div>
         <div class="corner-design corner-bl"></div>
         <div class="corner-design corner-br"></div>
-        
+
         <div class="front-page">
             <div class="logo">KC</div>
             <div class="institution">KARIM CITY INTER COLLEGE</div>
             <div class="college-info">MANGO CAMPUS, JAMSHEDPUR</div>
             <div class="department">DEPARTMENT OF COMPUTER SCIENCE</div>
-            
+
             <div class="divider"></div>
-            
+
             <div class="project-title">Computer Science</div>
             <div class="project-subtitle">Practical Project</div>
-            <div class="college-info" style="font-size: 18px; margin: 10px 0;">Class XII (ISC & I.COM)</div>
+            <div class="college-info" style="font-size: 18px; margin: 10px 0;">Class XII (I.SC [ MATH ] )</div>
             <div class="session">Academic Session 2024-2025</div>
-            
+
             <div class="student-info">
                 <div class="info-row">
                     <span class="info-label">Student Name:</span>
-                    <span>[Your Name]</span>
+                    <span> Mohammad Safaraz Hussain</span>
                 </div>
                 <div class="info-row">
                     <span class="info-label">Class & Section:</span>
-                    <span>XII - [Section]</span>
+                    <span>XII - A</span>
                 </div>
                 <div class="info-row">
                     <span class="info-label">Roll Number:</span>
-                    <span>[Your Roll No.]</span>
+                    <span>345</span>
                 </div>
                 <div class="info-row">
                     <span class="info-label">Subject Teacher:</span>
-                    <span>[Teacher Name]</span>
+                    <span>Md - Abbas</span>
                 </div>
             </div>
         </div>
@@ -486,7 +525,7 @@
         <div class="corner-design corner-tr"></div>
         <div class="corner-design corner-bl"></div>
         <div class="corner-design corner-br"></div>
-        
+
         <div class="certificate-border">
             <div class="certificate-inner">
                 <div style="text-align: center;">
@@ -494,17 +533,21 @@
                     <div style="font-size: 14px; color: #718096;">Mango Campus, Jamshedpur</div>
                     <div style="text-align: center;"><span class="cert-title">CERTIFICATE</span></div>
                 </div>
-                
+
                 <div class="cert-content">
                     <p style="margin-bottom: 30px;">This is to certify that</p>
-                    <span class="student-name">[Your Name]</span>
-                    <p style="margin: 30px 0;">Student of <strong>Class XII [Section]</strong>, Roll No. <strong>[Your Roll No.]</strong></p>
-                    <p style="margin: 30px 0;">has successfully completed the <strong>Computer Science Project</strong> on</p>
+                    <span class="student-name"> Mohammad Sarfaraz Hussain </span>
+                    <p style="margin: 30px 0;">Student of <strong>Class XII - A</strong>, Roll No. <strong> 345
+                        </strong></p>
+                    <p style="margin: 30px 0;">has successfully completed the <strong>Computer Science Project</strong>
+                        on</p>
                     <p style="margin: 20px 0;"><strong>"Programming in C++ and SQL Database Management"</strong></p>
-                    <p style="margin: 30px 0;">during the academic session <strong>2024-2025</strong> under my guidance and supervision.</p>
-                    <p style="margin-top: 30px;">The project work is based on the practical syllabus prescribed by the institution and demonstrates satisfactory understanding of programming concepts.</p>
+                    <p style="margin: 30px 0;">during the academic session <strong>2024-2025</strong> under my guidance
+                        and supervision.</p>
+                    <p style="margin-top: 30px;">The project work is based on the practical syllabus prescribed by the
+                        institution and demonstrates satisfactory understanding of programming concepts.</p>
                 </div>
-                
+
                 <div class="cert-footer">
                     <div class="signature-block">
                         <div class="signature-line"></div>
@@ -513,7 +556,7 @@
                     <div class="signature-block">
                         <div class="signature-line"></div>
                         <div style="font-size: 14px; font-weight: 600;">Subject Teacher</div>
-                        <div style="font-size: 12px; color: #718096; margin-top: 5px;">[Teacher Name]</div>
+                        <div style="font-size: 12px; color: #718096; margin-top: 5px;">Md - Abbas</div>
                     </div>
                     <div class="signature-block">
                         <div class="signature-line"></div>
@@ -530,38 +573,52 @@
         <div class="corner-design corner-tr"></div>
         <div class="corner-design corner-bl"></div>
         <div class="corner-design corner-br"></div>
-        
+
         <div style="text-align: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 3px solid #667eea;">
             <div class="index-title" style="border: none; margin: 0;">ACKNOWLEDGEMENT</div>
         </div>
-        
+
         <div class="ack-content">
-            <p>I would like to express my sincere gratitude to all those who helped me in the successful completion of this <span class="highlight">Computer Science Project</span>. This project has been a valuable learning experience that enhanced my understanding of C++ programming and database management.</p>
-            
-            <p>I am deeply grateful to my <span class="highlight">Computer Science teacher [Teacher Name]</span> for their constant guidance, valuable suggestions, and continuous support throughout this project. Their expertise and patient mentoring helped me overcome various challenges and complete this work with confidence.</p>
-            
-            <p>I would like to extend my heartfelt thanks to our <span class="highlight">Principal</span> for providing excellent infrastructure and computer laboratory facilities, which made this practical work possible. The well-equipped lab and supportive environment greatly facilitated my learning.</p>
-            
-            <p>I am thankful to the <span class="highlight">Laboratory staff</span> for their cooperation and assistance whenever needed. Their help in accessing the required resources and maintaining the computer systems was invaluable.</p>
-            
-            <p>I would also like to thank my <span class="highlight">parents and family members</span> for their continuous encouragement and support throughout this project work. Their motivation kept me focused and determined.</p>
-            
-            <p>Last but not least, I am grateful to my <span class="highlight">classmates and friends</span> for their cooperation and helpful discussions during the course of this project. Their insights and suggestions were extremely beneficial.</p>
-            
-            <p>This project has significantly contributed to my practical knowledge in Computer Science, and I look forward to applying these learnings in my future academic and professional endeavors.</p>
+            <p>I would like to express my sincere gratitude to all those who helped me in the successful completion of
+                this <span class="highlight">Computer Science Project</span>. This project has been a valuable learning
+                experience that enhanced my understanding of C++ programming and database management.</p>
+
+            <p>I am deeply grateful to my <span class="highlight">Computer Science teacher Md - Abbas</span> for
+                their constant guidance, valuable suggestions, and continuous support throughout this project. Their
+                expertise and patient mentoring helped me overcome various challenges and complete this work with
+                confidence.</p>
+
+            <p>I would like to extend my heartfelt thanks to our <span class="highlight">Principal</span> for providing
+                excellent infrastructure and computer laboratory facilities, which made this practical work possible.
+                The well-equipped lab and supportive environment greatly facilitated my learning.</p>
+
+            <p>I am thankful to the <span class="highlight">Laboratory staff</span> for their cooperation and assistance
+                whenever needed. Their help in accessing the required resources and maintaining the computer systems was
+                invaluable.</p>
+
+            <p>I would also like to thank my <span class="highlight">parents and family members</span> for their
+                continuous encouragement and support throughout this project work. Their motivation kept me focused and
+                determined.</p>
+
+            <p>Last but not least, I am grateful to my <span class="highlight">classmates and friends</span> for their
+                cooperation and helpful discussions during the course of this project. Their insights and suggestions
+                were extremely beneficial.</p>
+
+            <p>This project has significantly contributed to my practical knowledge in Computer Science, and I look
+                forward to applying these learnings in my future academic and professional endeavors.</p>
         </div>
-        
+
         <div style="margin-top: 60px;">
             <p style="font-size: 15px;"><strong>Date:</strong> _______________</p>
             <p style="font-size: 15px; margin-top: 10px;"><strong>Place:</strong> Jamshedpur</p>
         </div>
-        
+
         <div class="ack-signature">
             <div style="margin-bottom: 50px;"></div>
             <div style="border-top: 2px solid #2d3748; width: 200px; display: inline-block;"></div>
-            <p style="margin-top: 10px; font-weight: 600;">[Your Name]</p>
-            <p style="font-size: 14px; color: #4a5568;">Class XII [Section]</p>
-            <p style="font-size: 14px; color: #4a5568;">Roll No. [Your Roll No.]</p>
+            <p style="margin-top: 10px; font-weight: 600;"> Mohammad Sarfaraz Huusain </p>
+            <p style="font-size: 14px; color: #4a5568;">Class XII - A </p>
+            <p style="font-size: 14px; color: #4a5568;">Roll No. 345 </p>
         </div>
     </div>
 
@@ -571,9 +628,9 @@
         <div class="corner-design corner-tr"></div>
         <div class="corner-design corner-bl"></div>
         <div class="corner-design corner-br"></div>
-        
+
         <div class="index-title">INDEX</div>
-        
+
         <table class="index-table">
             <thead>
                 <tr>
@@ -688,16 +745,18 @@
         <div class="corner-design corner-tr"></div>
         <div class="corner-design corner-bl"></div>
         <div class="corner-design corner-br"></div>
-        
+
         <div class="page-title">Q1: Difference between Procedural and Object-Oriented Programming</div>
-        
+
         <div class="question">
-            What is the difference between Procedural Programming and Object-Oriented Programming? Explain with examples.
+            What is the difference between Procedural Programming and Object-Oriented Programming? Explain with
+            examples.
         </div>
-        
+
         <div class="section-heading">Procedural Programming:</div>
         <div class="explanation">
-            <p>Procedural programming is based on procedure calls. Programs are divided into functions or procedures that operate on data. Data and functions are separate.</p>
+            <p>Procedural programming is based on procedure calls. Programs are divided into functions or procedures
+                that operate on data. Data and functions are separate.</p>
             <ul style="margin-left: 30px; line-height: 1.8;">
                 <li><strong>Characteristics:</strong> Top-down approach, Global data, Functions manipulate data</li>
                 <li><strong>Advantages:</strong> Easy to understand, Simple for small programs</li>
@@ -705,10 +764,11 @@
                 <li><strong>Example Languages:</strong> C, Pascal, FORTRAN</li>
             </ul>
         </div>
-        
+
         <div class="section-heading">Object-Oriented Programming (OOP):</div>
         <div class="explanation">
-            <p>OOP treats data as objects that contain both data and functions. It follows bottom-up approach with concepts like encapsulation, inheritance, polymorphism.</p>
+            <p>OOP treats data as objects that contain both data and functions. It follows bottom-up approach with
+                concepts like encapsulation, inheritance, polymorphism.</p>
             <ul style="margin-left: 30px; line-height: 1.8;">
                 <li><strong>Characteristics:</strong> Data hiding, Reusability, Modularity</li>
                 <li><strong>Advantages:</strong> Easy maintenance, Code reusability, Better security</li>
@@ -716,15 +776,39 @@
                 <li><strong>Example Languages:</strong> C++, Java, Python</li>
             </ul>
         </div>
-        
+
         <div class="section-heading">Key Differences:</div>
         <table class="index-table" style="margin-top: 20px;">
-            <tr><th>Aspect</th><th>Procedural</th><th>OOP</th></tr>
-            <tr><td>Approach</td><td>Top-down</td><td>Bottom-up</td></tr>
-            <tr><td>Data Access</td><td>Global</td><td>Encapsulated</td></tr>
-            <tr><td>Reusability</td><td>Low</td><td>High (Inheritance)</td></tr>
-            <tr><td>Security</td><td>Low</td><td>High (Data hiding)</td></tr>
-            <tr><td>Maintenance</td><td>Difficult</td><td>Easy</td></tr>
+            <tr>
+                <th>Aspect</th>
+                <th>Procedural</th>
+                <th>OOP</th>
+            </tr>
+            <tr>
+                <td>Approach</td>
+                <td>Top-down</td>
+                <td>Bottom-up</td>
+            </tr>
+            <tr>
+                <td>Data Access</td>
+                <td>Global</td>
+                <td>Encapsulated</td>
+            </tr>
+            <tr>
+                <td>Reusability</td>
+                <td>Low</td>
+                <td>High (Inheritance)</td>
+            </tr>
+            <tr>
+                <td>Security</td>
+                <td>Low</td>
+                <td>High (Data hiding)</td>
+            </tr>
+            <tr>
+                <td>Maintenance</td>
+                <td>Difficult</td>
+                <td>Easy</td>
+            </tr>
         </table>
     </div>
 
@@ -734,15 +818,15 @@
         <div class="corner-design corner-tr"></div>
         <div class="corner-design corner-bl"></div>
         <div class="corner-design corner-br"></div>
-        
+
         <div class="page-title">Q2: Check if Character is Vowel</div>
-        
+
         <div class="question">
             Write a program to check if a given character is a vowel or consonant.
         </div>
-        
+
         <div class="code-block">
-<pre><span class="comment">// Vowel Check Program</span>
+            <pre><span class="comment">// Vowel Check Program</span>
 <span class="keyword">#include</span> &lt;iostream&gt;
 <span class="keyword">#include</span> &lt;cctype&gt;  <span class="comment">// For toupper and isalpha</span>
 <span class="keyword">using namespace</span> std;
@@ -767,16 +851,17 @@
 }
 </pre>
         </div>
-        
+
         <div class="section-heading">Output:</div>
         <div class="output-block">
-Enter a character: a
-A is a vowel.
+            Enter a character: a
+            A is a vowel.
         </div>
-        
+
         <div class="section-heading">Explanation:</div>
         <div class="explanation">
-            <p>The program takes a character input and uses conditional statements to check if it's one of the vowels (A, E, I, O, U). toupper() function handles both uppercase and lowercase inputs.</p>
+            <p>The program takes a character input and uses conditional statements to check if it's one of the vowels
+                (A, E, I, O, U). toupper() function handles both uppercase and lowercase inputs.</p>
             <p><strong>Time Complexity:</strong> O(1)</p>
         </div>
     </div>
@@ -787,15 +872,15 @@ A is a vowel.
         <div class="corner-design corner-tr"></div>
         <div class="corner-design corner-bl"></div>
         <div class="corner-design corner-br"></div>
-        
+
         <div class="page-title">Q3: Swap Two Numbers</div>
-        
+
         <div class="question">
             Write a program to swap two numbers using a temporary variable.
         </div>
-        
+
         <div class="code-block">
-<pre><span class="comment">// Swap Numbers Program</span>
+            <pre><span class="comment">// Swap Numbers Program</span>
 <span class="keyword">#include</span> &lt;iostream&gt;
 <span class="keyword">using namespace</span> std;
 
@@ -819,19 +904,21 @@ Before swapping: a = "</span> &lt;&lt; a &lt;&lt; <span class="string">", b = "<
 }
 </pre>
         </div>
-        
+
         <div class="section-heading">Output:</div>
         <div class="output-block">
-Enter two numbers: 10 20
+            Enter two numbers: 10 20
 
-Before swapping: a = 10, b = 20
-After swapping: a = 20, b = 10
+            Before swapping: a = 10, b = 20
+            After swapping: a = 20, b = 10
         </div>
-        
+
         <div class="section-heading">Explanation:</div>
         <div class="explanation">
-            <p>The program uses a temporary variable to hold one value while swapping the two numbers. This is the simplest method for swapping.</p>
-            <p><strong>Alternative:</strong> Swapping without temp using arithmetic: a = a + b; b = a - b; a = a - b;</p>
+            <p>The program uses a temporary variable to hold one value while swapping the two numbers. This is the
+                simplest method for swapping.</p>
+            <p><strong>Alternative:</strong> Swapping without temp using arithmetic: a = a + b; b = a - b; a = a - b;
+            </p>
         </div>
     </div>
 
@@ -841,15 +928,15 @@ After swapping: a = 20, b = 10
         <div class="corner-design corner-tr"></div>
         <div class="corner-design corner-bl"></div>
         <div class="corner-design corner-br"></div>
-        
+
         <div class="page-title">Q4: Sum of First N Natural Numbers</div>
-        
+
         <div class="question">
             Write a program to calculate the sum of first N natural numbers using formula.
         </div>
-        
+
         <div class="code-block">
-<pre><span class="comment">// Sum of N Natural Numbers</span>
+            <pre><span class="comment">// Sum of N Natural Numbers</span>
 <span class="keyword">#include</span> &lt;iostream&gt;
 <span class="keyword">using namespace</span> std;
 
@@ -869,16 +956,17 @@ After swapping: a = 20, b = 10
 }
 </pre>
         </div>
-        
+
         <div class="section-heading">Output:</div>
         <div class="output-block">
-Enter value of N: 10
-Sum of first 10 natural numbers = 55
+            Enter value of N: 10
+            Sum of first 10 natural numbers = 55
         </div>
-        
+
         <div class="section-heading">Explanation:</div>
         <div class="explanation">
-            <p>Uses Gauss's formula for sum of first N natural numbers: n(n+1)/2. long long is used to handle large values.</p>
+            <p>Uses Gauss's formula for sum of first N natural numbers: n(n+1)/2. long long is used to handle large
+                values.</p>
             <p><strong>Time Complexity:</strong> O(1)</p>
         </div>
     </div>
@@ -889,15 +977,15 @@ Sum of first 10 natural numbers = 55
         <div class="corner-design corner-tr"></div>
         <div class="corner-design corner-bl"></div>
         <div class="corner-design corner-br"></div>
-        
+
         <div class="page-title">Q5: Sum of Diagonal Elements of Matrix</div>
-        
+
         <div class="question">
             Write a program to find the sum of diagonal elements of a square matrix.
         </div>
-        
+
         <div class="code-block">
-<pre><span class="comment">// Matrix Diagonal Sum</span>
+            <pre><span class="comment">// Matrix Diagonal Sum</span>
 <span class="keyword">#include</span> &lt;iostream&gt;
 <span class="keyword">using namespace</span> std;
 
@@ -928,20 +1016,21 @@ Sum of first 10 natural numbers = 55
 }
 </pre>
         </div>
-        
+
         <div class="section-heading">Output:</div>
         <div class="output-block">
-Enter matrix size: 3
-Enter matrix elements:
-1 2 3
-4 5 6
-7 8 9
-Sum of diagonal elements = 15
+            Enter matrix size: 3
+            Enter matrix elements:
+            1 2 3
+            4 5 6
+            7 8 9
+            Sum of diagonal elements = 15
         </div>
-        
+
         <div class="section-heading">Explanation:</div>
         <div class="explanation">
-            <p>The main diagonal elements are where row index equals column index (matrix[i][i]). The program sums these elements.</p>
+            <p>The main diagonal elements are where row index equals column index (matrix[i][i]). The program sums these
+                elements.</p>
             <p><strong>Time Complexity:</strong> O(n)</p>
         </div>
     </div>
@@ -952,15 +1041,15 @@ Sum of diagonal elements = 15
         <div class="corner-design corner-tr"></div>
         <div class="corner-design corner-bl"></div>
         <div class="corner-design corner-br"></div>
-        
+
         <div class="page-title">Q6: Check Palindrome Number</div>
-        
+
         <div class="question">
             Write a program to check if a number is palindrome or not.
         </div>
-        
+
         <div class="code-block">
-<pre><span class="comment">// Palindrome Number Check</span>
+            <pre><span class="comment">// Palindrome Number Check</span>
 <span class="keyword">#include</span> &lt;iostream&gt;
 <span class="keyword">using namespace</span> std;
 
@@ -992,16 +1081,17 @@ Sum of diagonal elements = 15
 }
 </pre>
         </div>
-        
+
         <div class="section-heading">Output:</div>
         <div class="output-block">
-Enter a number: 121
-121 is a palindrome.
+            Enter a number: 121
+            121 is a palindrome.
         </div>
-        
+
         <div class="section-heading">Explanation:</div>
         <div class="explanation">
-            <p>A palindrome number reads the same forwards and backwards. The program reverses the number by extracting digits and compares it with the original.</p>
+            <p>A palindrome number reads the same forwards and backwards. The program reverses the number by extracting
+                digits and compares it with the original.</p>
             <p><strong>Time Complexity:</strong> O(log n)</p>
         </div>
     </div>
@@ -1012,15 +1102,15 @@ Enter a number: 121
         <div class="corner-design corner-tr"></div>
         <div class="corner-design corner-bl"></div>
         <div class="corner-design corner-br"></div>
-        
+
         <div class="page-title">Q7: Check Armstrong Number</div>
-        
+
         <div class="question">
             Write a program to check if a number is Armstrong number or not.
         </div>
-        
+
         <div class="code-block">
-<pre><span class="comment">// Armstrong Number Check</span>
+            <pre><span class="comment">// Armstrong Number Check</span>
 <span class="keyword">#include</span> &lt;iostream&gt;
 <span class="keyword">#include</span> &lt;math.h&gt;
 <span class="keyword">using namespace</span> std;
@@ -1058,16 +1148,17 @@ Enter a number: 121
 }
 </pre>
         </div>
-        
+
         <div class="section-heading">Output:</div>
         <div class="output-block">
-Enter a number: 153
-153 is an Armstrong number.
+            Enter a number: 153
+            153 is an Armstrong number.
         </div>
-        
+
         <div class="section-heading">Explanation:</div>
         <div class="explanation">
-            <p>An Armstrong number is one where the sum of its digits raised to the power of number of digits equals the original number (e.g., 153 = 1³ + 5³ + 3³).</p>
+            <p>An Armstrong number is one where the sum of its digits raised to the power of number of digits equals the
+                original number (e.g., 153 = 1³ + 5³ + 3³).</p>
             <p><strong>Time Complexity:</strong> O(log n)</p>
         </div>
     </div>
@@ -1078,15 +1169,16 @@ Enter a number: 153
         <div class="corner-design corner-tr"></div>
         <div class="corner-design corner-bl"></div>
         <div class="corner-design corner-br"></div>
-        
+
         <div class="page-title">Q8: Library Class with Data Members</div>
-        
+
         <div class="question">
-            Define a class Library that has data members for library name and number of books in different categories. Include member functions to input and display data.
+            Define a class Library that has data members for library name and number of books in different categories.
+            Include member functions to input and display data.
         </div>
-        
+
         <div class="code-block">
-<pre><span class="comment">// Library Class Program</span>
+            <pre><span class="comment">// Library Class Program</span>
 <span class="keyword">#include</span> &lt;iostream&gt;
 <span class="keyword">#include</span> &lt;string&gt;
 <span class="keyword">using namespace</span> std;
@@ -1131,20 +1223,20 @@ Enter a number: 153
 }
 </pre>
         </div>
-        
+
         <div class="section-heading">Output:</div>
         <div class="output-block">
-Enter library name: Central Library
-Enter number of English books: 500
-Enter number of Hindi books: 300
-Enter number of other books: 200
+            Enter library name: Central Library
+            Enter number of English books: 500
+            Enter number of Hindi books: 300
+            Enter number of other books: 200
 
-===== Library Information =====
-Library Name: Central Library
-English Books: 500
-Hindi Books: 300
-Other Books: 200
-Total Books: 1000
+            ===== Library Information =====
+            Library Name: Central Library
+            English Books: 500
+            Hindi Books: 300
+            Other Books: 200
+            Total Books: 1000
         </div>
     </div>
 
@@ -1154,15 +1246,16 @@ Total Books: 1000
         <div class="corner-design corner-tr"></div>
         <div class="corner-design corner-bl"></div>
         <div class="corner-design corner-br"></div>
-        
+
         <div class="page-title">Q9: Linear Search Program</div>
-        
+
         <div class="question">
-            Write a Program to input 10 integer numbers in an array and search a particular number with their position (Linear search).
+            Write a Program to input 10 integer numbers in an array and search a particular number with their position
+            (Linear search).
         </div>
-        
+
         <div class="code-block">
-<pre><span class="comment">// Linear Search Program</span>
+            <pre><span class="comment">// Linear Search Program</span>
 <span class="keyword">#include</span> &lt;iostream&gt;
 <span class="keyword">using namespace</span> std;
 
@@ -1201,30 +1294,31 @@ Number "</span> &lt;&lt; search &lt;&lt; <span class="string">" not found in arr
 }
 </pre>
         </div>
-        
+
         <div class="section-heading">Output:</div>
         <div class="output-block">
-Enter 10 integer numbers:
-Element [0]: 23
-Element [1]: 45
-Element [2]: 67
-Element [3]: 12
-Element [4]: 89
-Element [5]: 34
-Element [6]: 56
-Element [7]: 78
-Element [8]: 90
-Element [9]: 21
+            Enter 10 integer numbers:
+            Element [0]: 23
+            Element [1]: 45
+            Element [2]: 67
+            Element [3]: 12
+            Element [4]: 89
+            Element [5]: 34
+            Element [6]: 56
+            Element [7]: 78
+            Element [8]: 90
+            Element [9]: 21
 
-Enter number to search: 56
+            Enter number to search: 56
 
-Number 56 found at position 6
-Index: 6
+            Number 56 found at position 6
+            Index: 6
         </div>
-        
+
         <div class="section-heading">Explanation:</div>
         <div class="explanation">
-            <p>Linear search is the simplest searching algorithm. It sequentially checks each element until a match is found or the entire array is traversed.</p>
+            <p>Linear search is the simplest searching algorithm. It sequentially checks each element until a match is
+                found or the entire array is traversed.</p>
             <p><strong>Time Complexity:</strong> O(n) - where n is the number of elements</p>
         </div>
     </div>
@@ -1235,15 +1329,15 @@ Index: 6
         <div class="corner-design corner-tr"></div>
         <div class="corner-design corner-bl"></div>
         <div class="corner-design corner-br"></div>
-        
+
         <div class="page-title">Q10: Fibonacci Series using Class and Object</div>
-        
+
         <div class="question">
             Write a Program to generate Fibonacci series using class and object.
         </div>
-        
+
         <div class="code-block">
-<pre><span class="comment">// Fibonacci Series using Class</span>
+            <pre><span class="comment">// Fibonacci Series using Class</span>
 <span class="keyword">#include</span> &lt;iostream&gt;
 <span class="keyword">using namespace</span> std;
 
@@ -1294,18 +1388,19 @@ Fibonacci Series: "</span> &lt;&lt; endl;
 }
 </pre>
         </div>
-        
+
         <div class="section-heading">Output:</div>
         <div class="output-block">
-Enter number of terms: 10
+            Enter number of terms: 10
 
-Fibonacci Series: 
-0 1 1 2 3 5 8 13 21 34 
+            Fibonacci Series:
+            0 1 1 2 3 5 8 13 21 34
         </div>
-        
+
         <div class="section-heading">Explanation:</div>
         <div class="explanation">
-            <p>The Fibonacci sequence is a series where each number is the sum of the two preceding ones. This program uses OOP concepts to generate the series.</p>
+            <p>The Fibonacci sequence is a series where each number is the sum of the two preceding ones. This program
+                uses OOP concepts to generate the series.</p>
             <p><strong>Formula:</strong> F(n) = F(n-1) + F(n-2), where F(0) = 0, F(1) = 1</p>
         </div>
     </div>
@@ -1316,17 +1411,18 @@ Fibonacci Series:
         <div class="corner-design corner-tr"></div>
         <div class="corner-design corner-bl"></div>
         <div class="corner-design corner-br"></div>
-        
+
         <div class="page-title">Q11: Stack - Push and Pop Operations</div>
-        
+
         <div class="question">
             What is Stack? Write Algorithm of Push and Pop operation.
         </div>
-        
+
         <div class="section-heading">What is Stack?</div>
         <div class="explanation">
-            <p>A Stack is a linear data structure that follows the <strong>LIFO (Last In First Out)</strong> principle. The element inserted last is the first one to be removed.</p>
-            
+            <p>A Stack is a linear data structure that follows the <strong>LIFO (Last In First Out)</strong> principle.
+                The element inserted last is the first one to be removed.</p>
+
             <p><strong>Basic Operations:</strong></p>
             <ul style="margin-left: 30px; line-height: 1.8;">
                 <li><strong>Push:</strong> Insert an element at the top of stack</li>
@@ -1335,13 +1431,14 @@ Fibonacci Series:
                 <li><strong>isEmpty:</strong> Check if stack is empty</li>
                 <li><strong>isFull:</strong> Check if stack is full</li>
             </ul>
-            
-            <p><strong>Applications:</strong> Function call management, Expression evaluation, Undo/Redo operations, Browser history</p>
+
+            <p><strong>Applications:</strong> Function call management, Expression evaluation, Undo/Redo operations,
+                Browser history</p>
         </div>
-        
+
         <div class="section-heading">Algorithm for PUSH Operation:</div>
         <div class="code-block">
-<pre><strong>Algorithm PUSH(STACK, TOP, MAX, ITEM):</strong>
+            <pre><strong>Algorithm PUSH(STACK, TOP, MAX, ITEM):</strong>
 
 Step 1: START
 Step 2: IF TOP = MAX - 1 THEN
@@ -1354,10 +1451,10 @@ Step 5: PRINT "Element inserted successfully"
 Step 6: STOP
 </pre>
         </div>
-        
+
         <div class="section-heading">Algorithm for POP Operation:</div>
         <div class="code-block">
-<pre><strong>Algorithm POP(STACK, TOP, ITEM):</strong>
+            <pre><strong>Algorithm POP(STACK, TOP, ITEM):</strong>
 
 Step 1: START
 Step 2: IF TOP = -1 THEN
@@ -1370,10 +1467,10 @@ Step 5: PRINT "Element deleted:", ITEM
 Step 6: STOP
 </pre>
         </div>
-        
+
         <div class="section-heading">Implementation in C++:</div>
         <div class="code-block">
-<pre><span class="comment">// Stack Implementation</span>
+            <pre><span class="comment">// Stack Implementation</span>
 <span class="keyword">#include</span> &lt;iostream&gt;
 <span class="keyword">using namespace</span> std;
 
@@ -1443,17 +1540,18 @@ Step 6: STOP
         <div class="corner-design corner-tr"></div>
         <div class="corner-design corner-bl"></div>
         <div class="corner-design corner-br"></div>
-        
+
         <div class="page-title">Q12: Queue - Insert and Delete Operations</div>
-        
+
         <div class="question">
             What is Queue? Write an Algorithm of insert and delete Operation.
         </div>
-        
+
         <div class="section-heading">What is Queue?</div>
         <div class="explanation">
-            <p>A Queue is a linear data structure that follows the <strong>FIFO (First In First Out)</strong> principle. The element inserted first is the first one to be removed.</p>
-            
+            <p>A Queue is a linear data structure that follows the <strong>FIFO (First In First Out)</strong> principle.
+                The element inserted first is the first one to be removed.</p>
+
             <p><strong>Basic Operations:</strong></p>
             <ul style="margin-left: 30px; line-height: 1.8;">
                 <li><strong>Enqueue (Insert):</strong> Add an element at the rear end</li>
@@ -1463,13 +1561,13 @@ Step 6: STOP
                 <li><strong>isEmpty:</strong> Check if queue is empty</li>
                 <li><strong>isFull:</strong> Check if queue is full</li>
             </ul>
-            
+
             <p><strong>Applications:</strong> CPU scheduling, Disk scheduling, Print queue, Breadth-first search</p>
         </div>
-        
+
         <div class="section-heading">Algorithm for INSERT (Enqueue) Operation:</div>
         <div class="code-block">
-<pre><strong>Algorithm INSERT(QUEUE, FRONT, REAR, MAX, ITEM):</strong>
+            <pre><strong>Algorithm INSERT(QUEUE, FRONT, REAR, MAX, ITEM):</strong>
 
 Step 1: START
 Step 2: IF REAR = MAX - 1 THEN
@@ -1485,10 +1583,10 @@ Step 6: PRINT "Element inserted successfully"
 Step 7: STOP
 </pre>
         </div>
-        
+
         <div class="section-heading">Algorithm for DELETE (Dequeue) Operation:</div>
         <div class="code-block">
-<pre><strong>Algorithm DELETE(QUEUE, FRONT, REAR, ITEM):</strong>
+            <pre><strong>Algorithm DELETE(QUEUE, FRONT, REAR, ITEM):</strong>
 
 Step 1: START
 Step 2: IF FRONT = -1 OR FRONT > REAR THEN
@@ -1505,10 +1603,10 @@ Step 6: PRINT "Element deleted:", ITEM
 Step 7: STOP
 </pre>
         </div>
-        
+
         <div class="section-heading">Implementation in C++:</div>
         <div class="code-block">
-<pre><span class="comment">// Queue Implementation</span>
+            <pre><span class="comment">// Queue Implementation</span>
 <span class="keyword">#include</span> &lt;iostream&gt;
 <span class="keyword">using namespace</span> std;
 
@@ -1585,23 +1683,26 @@ Step 7: STOP
         <div class="corner-design corner-tr"></div>
         <div class="corner-design corner-bl"></div>
         <div class="corner-design corner-br"></div>
-        
+
         <div class="page-title">Q13: Bubble Sort Program and Algorithm</div>
-        
+
         <div class="question">
             Write a Program along with an Algorithm of Bubble Sort.
         </div>
-        
+
         <div class="section-heading">What is Bubble Sort?</div>
         <div class="explanation">
-            <p>Bubble Sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in wrong order. The pass through the list is repeated until the list is sorted.</p>
+            <p>Bubble Sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent
+                elements and swaps them if they are in wrong order. The pass through the list is repeated until the list
+                is sorted.</p>
             <p><strong>Time Complexity:</strong> O(n²) - Worst and Average case<br>
-            <strong>Space Complexity:</strong> O(1)</p>
+                <strong>Space Complexity:</strong> O(1)
+            </p>
         </div>
-        
+
         <div class="section-heading">Algorithm for Bubble Sort:</div>
         <div class="code-block">
-<pre><strong>Algorithm BUBBLE_SORT(ARRAY, N):</strong>
+            <pre><strong>Algorithm BUBBLE_SORT(ARRAY, N):</strong>
 
 Step 1: START
 Step 2: FOR i = 0 TO N-2
@@ -1621,10 +1722,10 @@ Step 4: STOP
 - Process continues until array is sorted
 </pre>
         </div>
-        
+
         <div class="section-heading">Program:</div>
         <div class="code-block">
-<pre><span class="comment">// Bubble Sort Implementation</span>
+            <pre><span class="comment">// Bubble Sort Implementation</span>
 <span class="keyword">#include</span> &lt;iostream&gt;
 <span class="keyword">using namespace</span> std;
 
@@ -1670,11 +1771,11 @@ Step 4: STOP
 }
 </pre>
         </div>
-        
+
         <div class="section-heading">Output:</div>
         <div class="output-block">
-Original array: 64 34 25 12 22 
-Sorted array: 12 22 25 34 64 
+            Original array: 64 34 25 12 22
+            Sorted array: 12 22 25 34 64
         </div>
     </div>
 
@@ -1684,15 +1785,15 @@ Sorted array: 12 22 25 34 64
         <div class="corner-design corner-tr"></div>
         <div class="corner-design corner-bl"></div>
         <div class="corner-design corner-br"></div>
-        
+
         <div class="page-title">Q14: Binary Search Program</div>
-        
+
         <div class="question">
             Write a program for Binary Search on sorted array.
         </div>
-        
+
         <div class="code-block">
-<pre><span class="comment">// Binary Search Implementation</span>
+            <pre><span class="comment">// Binary Search Implementation</span>
 <span class="keyword">#include</span> &lt;iostream&gt;
 <span class="keyword">using namespace</span> std;
 
@@ -1739,28 +1840,29 @@ Enter number to search: "</span>;
 }
 </pre>
         </div>
-        
+
         <div class="section-heading">Output:</div>
         <div class="output-block">
-Enter 10 sorted numbers:
-Element [0]: 10
-Element [1]: 20
-Element [2]: 30
-Element [3]: 40
-Element [4]: 50
-Element [5]: 60
-Element [6]: 70
-Element [7]: 80
-Element [8]: 90
-Element [9]: 100
+            Enter 10 sorted numbers:
+            Element [0]: 10
+            Element [1]: 20
+            Element [2]: 30
+            Element [3]: 40
+            Element [4]: 50
+            Element [5]: 60
+            Element [6]: 70
+            Element [7]: 80
+            Element [8]: 90
+            Element [9]: 100
 
-Enter number to search: 60
-Element found at index: 5
+            Enter number to search: 60
+            Element found at index: 5
         </div>
-        
+
         <div class="section-heading">Explanation:</div>
         <div class="explanation">
-            <p>Binary search works on sorted arrays by repeatedly dividing the search interval in half. It finds the target by comparing with the middle element.</p>
+            <p>Binary search works on sorted arrays by repeatedly dividing the search interval in half. It finds the
+                target by comparing with the middle element.</p>
             <p><strong>Time Complexity:</strong> O(log n)</p>
             <p><strong>Prerequisite:</strong> Array must be sorted</p>
         </div>
@@ -1772,15 +1874,15 @@ Element found at index: 5
         <div class="corner-design corner-tr"></div>
         <div class="corner-design corner-bl"></div>
         <div class="corner-design corner-br"></div>
-        
+
         <div class="page-title">Q15: Postfix Expression Evaluation</div>
-        
+
         <div class="question">
             Write a program to evaluate postfix expression using stack.
         </div>
-        
+
         <div class="code-block">
-<pre><span class="comment">// Postfix Expression Evaluation</span>
+            <pre><span class="comment">// Postfix Expression Evaluation</span>
 <span class="keyword">#include</span> &lt;iostream&gt;
 <span class="keyword">#include</span> &lt;stack&gt;
 <span class="keyword">#include</span> &lt;cctype&gt;  <span class="comment">// For isdigit</span>
@@ -1823,16 +1925,17 @@ Element found at index: 5
 }
 </pre>
         </div>
-        
+
         <div class="section-heading">Output:</div>
         <div class="output-block">
-Enter postfix expression: 23+5*
-Result: 25
+            Enter postfix expression: 23+5*
+            Result: 25
         </div>
-        
+
         <div class="section-heading">Explanation:</div>
         <div class="explanation">
-            <p>Postfix (Reverse Polish Notation) evaluates expressions without parentheses. Stack is used: operands pushed, operators pop two operands, apply operation, push result.</p>
+            <p>Postfix (Reverse Polish Notation) evaluates expressions without parentheses. Stack is used: operands
+                pushed, operators pop two operands, apply operation, push result.</p>
             <p><strong>Example:</strong> "23+5*" = (2+3)*5 = 25</p>
             <p><strong>Time Complexity:</strong> O(n) where n is length of expression</p>
         </div>
@@ -1844,12 +1947,12 @@ Result: 25
         <div class="corner-design corner-tr"></div>
         <div class="corner-design corner-bl"></div>
         <div class="corner-design corner-br"></div>
-        
+
         <div class="page-title">SQL Database Management Commands</div>
-        
+
         <div class="section-heading">1. DDL Commands (Data Definition Language)</div>
         <div class="sql-query">
-<pre>-- CREATE DATABASE
+            <pre>-- CREATE DATABASE
 CREATE DATABASE SchoolDB;
 
 -- USE DATABASE
@@ -1877,10 +1980,10 @@ DROP TABLE Students;
 DROP DATABASE SchoolDB;
 </pre>
         </div>
-        
+
         <div class="section-heading">2. DML Commands (Data Manipulation Language)</div>
         <div class="sql-query">
-<pre>-- INSERT DATA
+            <pre>-- INSERT DATA
 INSERT INTO Students (Name, Age, Class, Marks) VALUES 
 ('Rahul Kumar', 17, 'XII-A', 85.50),
 ('Priya Singh', 16, 'XII-B', 92.00),
@@ -1897,10 +2000,10 @@ SELECT * FROM Students;
 SELECT Name, Marks FROM Students WHERE Marks &gt; 80;
 </pre>
         </div>
-        
+
         <div class="section-heading">3. DQL Commands (Data Query Language)</div>
         <div class="sql-query">
-<pre>-- Simple SELECT
+            <pre>-- Simple SELECT
 SELECT * FROM Students ORDER BY Marks DESC;
 
 -- Aggregate Functions
@@ -1923,7 +2026,7 @@ FROM Students s
 JOIN Teachers t ON s.Class = t.Subject;
 </pre>
         </div>
-        
+
         <div class="section-heading">4. Constraints and Keys</div>
         <div class="explanation">
             <ul style="margin-left: 30px; line-height: 1.8;">
@@ -1935,20 +2038,21 @@ JOIN Teachers t ON s.Class = t.Subject;
                 <li><strong>DEFAULT:</strong> Sets default value</li>
             </ul>
         </div>
-        
+
         <div class="section-heading">5. Indexes</div>
         <div class="sql-query">
-<pre>-- CREATE INDEX
+            <pre>-- CREATE INDEX
 CREATE INDEX idx_student_name ON Students(Name);
 
 -- DROP INDEX
 DROP INDEX idx_student_name ON Students;
 </pre>
         </div>
-        
+
         <div class="section-heading">Explanation:</div>
         <div class="explanation">
-            <p>SQL commands manage databases: DDL for structure, DML for data manipulation, DQL for querying. Indexes improve search performance but slow down inserts/updates.</p>
+            <p>SQL commands manage databases: DDL for structure, DML for data manipulation, DQL for querying. Indexes
+                improve search performance but slow down inserts/updates.</p>
         </div>
     </div>
 
@@ -1958,37 +2062,42 @@ DROP INDEX idx_student_name ON Students;
         <div class="corner-design corner-tr"></div>
         <div class="corner-design corner-bl"></div>
         <div class="corner-design corner-br"></div>
-        
+
         <div class="index-title" style="border-bottom: 3px solid #764ba2; padding-bottom: 15px;">BIBLIOGRAPHY</div>
-        
+
         <div class="bib-item">
             <strong>1.</strong> Sumita Arora, "Computer Science with C++", Dhanpat Rai & Co., 2023 Edition.
         </div>
-        
+
         <div class="bib-item">
-            <strong>2.</strong> E. Balagurusamy, "Object Oriented Programming with C++", McGraw Hill Education, 4th Edition, 2018.
+            <strong>2.</strong> E. Balagurusamy, "Object Oriented Programming with C++", McGraw Hill Education, 4th
+            Edition, 2018.
         </div>
-        
+
         <div class="bib-item">
             <strong>3.</strong> SQL Tutorial - W3Schools, Online Resource: https://www.w3schools.com/sql/
         </div>
-        
+
         <div class="bib-item">
-            <strong>4.</strong> GeeksforGeeks - Data Structures and Algorithms, Online Resource: https://www.geeksforgeeks.org/
+            <strong>4.</strong> GeeksforGeeks - Data Structures and Algorithms, Online Resource:
+            https://www.geeksforgeeks.org/
         </div>
-        
+
         <div class="bib-item">
-            <strong>5.</strong> ISC Class XII Computer Science Syllabus 2024-25, Council for the Indian School Certificate Examinations (CISCE).
+            <strong>5.</strong> ISC Class XII Computer Science Syllabus 2024-25, Council for the Indian School
+            Certificate Examinations (CISCE).
         </div>
-        
+
         <div class="bib-item">
             <strong>6.</strong> "Introduction to Database Management Systems", Oracle Documentation, Online Resource.
         </div>
-        
+
         <div class="explanation" style="margin-top: 30px;">
-            <p>This project was compiled using standard textbooks, online tutorials, and official syllabus guidelines. All code examples were tested on Dev-C++ compiler and MySQL Workbench.</p>
+            <p>This project was compiled using standard textbooks, online tutorials, and official syllabus guidelines.
+                All code examples were tested on Dev-C++ compiler and MySQL Workbench.</p>
         </div>
     </div>
 
 </body>
+
 </html>
