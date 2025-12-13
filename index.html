@@ -1201,13 +1201,13 @@
         <div class="page-title">Q8: Library Class with Data Members</div>
 
         <div class="question">
-            Define a Class Library for the following specifications. Private members: Name, English_books, hindi_books, others, total_books, Calculates(). Public members: Readdata(), Printdata().
+            Define a Class Library for the following specifications. Private members: Name, English_books, hindi_books, others, total_books. Functions: Calculate(), Readdata(), Printdata().
         </div>
 
         <div class="code-block">
             <pre><span class="comment">// Library Class as per Question Paper Specs</span>
 <span class="keyword">#include</span> &lt;iostream&gt;
-<span class="keyword">#include</span> &lt;stdio.h&gt; <span class="comment">// for gets() or generic input</span>
+<span class="keyword">#include</span> &lt;stdio.h&gt; 
 <span class="keyword">using namespace</span> std;
 
 <span class="keyword">class</span> Library {
@@ -1218,15 +1218,16 @@
     <span class="keyword">int</span> others;
     <span class="keyword">int</span> total_books;
 
-    <span class="comment">// Private member function</span>
-    <span class="keyword">void</span> Calculates() {
+    <span class="comment">// Private member function returning total as per question</span>
+    <span class="keyword">int</span> Calculate() {
         total_books = English_books + hindi_books + others;
+        <span class="keyword">return</span> total_books;
     }
 
 <span class="keyword">public</span>:
     <span class="keyword">void</span> Readdata() {
         cout &lt;&lt; <span class="string">"Enter Library Name: "</span>;
-        cin.ignore();
+        <span class="comment">// Removed cin.ignore() to prevent skipping first char</span>
         cin.getline(Name, 20);
         
         cout &lt;&lt; <span class="string">"Enter No. of English Books: "</span>;
@@ -1239,7 +1240,7 @@
         cin &gt;&gt; others;
 
         <span class="comment">// Invoking compute function</span>
-        Calculates();
+        Calculate();
     }
 
     <span class="keyword">void</span> Printdata() {
@@ -1615,7 +1616,7 @@ Step 4: STOP
 Step 1: START
 Step 2: Set LOW = 0, HIGH = N - 1
 Step 3: Repeat Step 4 while LOW <= HIGH
-Step 4:     Set MID = (LOW + HIGH) / 2
+Step 4:      Set MID = (LOW + HIGH) / 2
             IF ARR[MID] = VAL THEN
                 PRINT "Value found at index", MID
                 EXIT
@@ -1645,9 +1646,9 @@ Step 6: STOP
         <span class="keyword">if</span>(arr[mid] == key) {
             <span class="keyword">return</span> mid;
         } <span class="keyword">else</span> <span class="keyword">if</span>(arr[mid] &lt; key) {
-            low = mid + 1;
+            <span class="keyword">low</span> = mid + 1;
         } <span class="keyword">else</span> {
-            high = mid - 1;
+            <span class="keyword">high</span> = mid - 1;
         }
     }
     <span class="keyword">return</span> -1;
@@ -1688,11 +1689,11 @@ Step 6: STOP
         <div class="page-title">Q15: Postfix Expression Evaluation</div>
 
         <div class="question">
-            Evaluate the following Postfix notation of expression (Show status of stack):
-            <br>Expression: <strong>20, 10, +, 5, 2, *, -, 10, /</strong>
+            (a) Evaluate the following Postfix notation of expression: <strong>20, 10, +, 5, 2, *, -, 10, /</strong><br>
+            (b) Convert Infix to Postfix (Show stack): <strong>(A - B) / ( C + D * E)</strong>
         </div>
 
-        <div class="section-heading">Stack Trace Table:</div>
+        <div class="section-heading">Part A: Evaluation Trace Table</div>
         <table class="index-table" style="font-family: 'Courier New', monospace;">
             <thead>
                 <tr>
@@ -1716,6 +1717,36 @@ Step 6: STOP
 
         <div class="output-block">
             <strong>Final Result:</strong> 2
+        </div>
+
+        <div class="section-heading">Part B: Infix to Postfix Conversion</div>
+        <table class="index-table" style="font-family: 'Courier New', monospace;">
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Stack</th>
+                    <th>Postfix Output</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>(</td><td>(</td><td></td></tr>
+                <tr><td>A</td><td>(</td><td>A</td></tr>
+                <tr><td>-</td><td>(-</td><td>A</td></tr>
+                <tr><td>B</td><td>(-</td><td>AB</td></tr>
+                <tr><td>)</td><td></td><td>AB-</td></tr>
+                <tr><td>/</td><td>/</td><td>AB-</td></tr>
+                <tr><td>(</td><td>/(</td><td>AB-</td></tr>
+                <tr><td>C</td><td>/(</td><td>AB-C</td></tr>
+                <tr><td>+</td><td>/(+</td><td>AB-C</td></tr>
+                <tr><td>D</td><td>/(+</td><td>AB-CD</td></tr>
+                <tr><td>*</td><td>/(+*</td><td>AB-CD</td></tr>
+                <tr><td>E</td><td>/(+*</td><td>AB-CDE</td></tr>
+                <tr><td>)</td><td>/</td><td>AB-CDE*+</td></tr>
+                <tr><td>End</td><td></td><td>AB-CDE*+/</td></tr>
+            </tbody>
+        </table>
+        <div class="output-block">
+            <strong>Final Postfix:</strong> AB-CDE*+/
         </div>
     </div>
 
